@@ -1,0 +1,98 @@
+<!-- ファイルの読み込み  ※phpをインストしていないので、後で開発-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>プロフィール</title>
+        <link rel="stylesheet" href="css\style_try.css">
+    </head>
+    <body>
+
+        <!-- <object data="プロフィール欄.txt" type="text/plain"></object> -->
+        <div  class ="container">
+            <table>
+                <thead>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>Birthday</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <button id ="create_btn">追加</button>
+            <button id ="delete_btn">削除</button>
+
+        </div>
+    </body>
+
+    <script>
+
+        document.querySelector("#create_btn").addEventListener('click', () =>{
+            const count = 0;
+            const i = document.querySelectorAll('td');
+            const num = document.querySelector('tbody');
+            const int_count = i.length;
+
+            if(int_count < 4 ){
+                const td = document.createElement('td');
+                td.content = 'hoge';
+
+                num.appendChild(td);
+
+            }else{
+
+                count++;
+                const tbody_new = document.createElement("tbody");
+                tbody_new.classList.add(count);
+                num.appendChild(tbody_new);
+            }
+        })
+        document.querySelector("#delete_btn").addEventListener('click',()=>{
+            
+
+        })
+
+
+    </script>
+</html>
+
+
+
+<!-- やりたいこと
+    読み込んだファイルをhtmlのテーブルの中に代入する
+     -->
+
+<!-- const sample = document.getElementById("sample");
+const text = document.getElementById("text")
+
+//ダイアログでファイルが選択された時
+sample.addEventListener("change", function (event) {
+
+  const file = event.target.files;
+
+  //FileReaderの作成
+  const reader = new FileReader();
+  //テキスト形式で読み込む
+  reader.readAsText(file[0]); -->
+
+  <!-- <!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>.txtファイルを選択してください</p>
+  <input type="file" id="sample"><br><br>
+  <textarea id="text" rows="10" cols="30" readonly></textarea>
+  <script src="index.js"></script>
+</body>
+
+</html> -->
